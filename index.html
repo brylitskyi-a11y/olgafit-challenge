@@ -116,6 +116,10 @@
   .logo-link { transition: transform 0.3s ease; display: inline-flex; }
   .logo-link:hover { transform: scale(1.06); }
 
+  /* Hover zoom — timeline numbered dots */
+  .timeline-dot { transition: transform 0.3s ease; }
+  .timeline-dot:hover { transform: scale(1.06); }
+
   /* Hover zoom — coach.jpg desktop background */
   #coach-desktop img:first-of-type {
     transition: transform 1s ease;
@@ -1117,45 +1121,132 @@
 <!-- HOW TRAININGS WILL GO -->
 <section class="py-20" style="background:#FFE0EC" id="training">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
     <div class="text-center mb-14 reveal">
-      <span style="color:#ff4892;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.1em">The method</span>
+      <span style="color:#ff4892;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.1em">The full picture</span>
       <h2 class="section-title text-dark mt-2" style="font-size:clamp(40px,6vw,72px)">
-        4 PRINCIPLES,<br><span style="color:#ff4892">ZERO TRICKS</span>
+        YOUR 5-WEEK<br><span style="color:#ff4892">TRANSFORMATION</span>
       </h2>
+      <p class="mt-4 max-w-xl mx-auto" style="font-size:16px;color:#1a1a1a99;line-height:1.6">
+        Your trial week isn't a separate product — it's Week 1 of your full 5-week transformation.
+      </p>
     </div>
-    <div class="steps-grid grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-      <div class="step-card reveal delay-100 bg-white rounded-3xl p-8 relative overflow-hidden hover:shadow-md transition-all duration-300" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
-        <span class="step-num font-display text-dark/5 select-none absolute top-4 right-5" style="font-size:80px;line-height:1">01</span>
-        <div class="step-icon-wrap w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:#FFE0EC"><span style="font-size:28px">🔐</span></div>
-        <span style="color:#ff4892;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:8px">Step 01</span>
-        <h3 class="step-title font-bold text-dark mb-3" style="font-size:20px;line-height:1.3">No hunger, no banned foods</h3>
-        <p class="step-desc" style="font-size:15px;color:#1a1a1a99;line-height:1.6">Flexible meal plans built around the food you already eat. No "off-plan" days, no calorie guilt.</p>
-      </div>
-      <div class="step-card reveal delay-200 bg-white rounded-3xl p-8 relative overflow-hidden hover:shadow-md transition-all duration-300" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
-        <span class="step-num font-display text-dark/5 select-none absolute top-4 right-5" style="font-size:80px;line-height:1">02</span>
-        <div class="step-icon-wrap w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:#FFE0EC"><span style="font-size:28px">📊</span></div>
-        <span style="color:#ff4892;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:8px">Step 02</span>
-        <h3 class="step-title font-bold text-dark mb-3" style="font-size:20px;line-height:1.3">30 minutes, 3 times a week</h3>
-        <p class="step-desc" style="font-size:15px;color:#1a1a1a99;line-height:1.6">At-home workouts. No gym, no equipment. In your living room while the kids watch cartoons.</p>
-      </div>
-      <div class="step-card reveal delay-300 bg-white rounded-3xl p-8 relative overflow-hidden hover:shadow-md transition-all duration-300" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
-        <span class="step-num font-display text-dark/5 select-none absolute top-4 right-5" style="font-size:80px;line-height:1">03</span>
-        <div class="step-icon-wrap w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:#FFE0EC"><span style="font-size:28px">🧘</span></div>
-        <span style="color:#ff4892;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:8px">Step 03</span>
-        <h3 class="step-title font-bold text-dark mb-3" style="font-size:20px;line-height:1.3">Community and support</h3>
-        <p class="step-desc" style="font-size:15px;color:#1a1a1a99;line-height:1.6">A space for women to support, inspire, and empower each other through fitness, wellness, and healthy living.</p>
-      </div>
-      <div class="step-card reveal delay-400 bg-white rounded-3xl p-8 relative overflow-hidden hover:shadow-md transition-all duration-300" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
-        <span class="step-num font-display text-dark/5 select-none absolute top-4 right-5" style="font-size:80px;line-height:1">04</span>
-        <div class="step-icon-wrap w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:#FFE0EC"><span style="font-size:28px">📈</span></div>
-        <span style="color:#ff4892;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:8px">Step 04</span>
-        <h3 class="step-title font-bold text-dark mb-3" style="font-size:20px;line-height:1.3">A coach who actually replies</h3>
-        <p class="step-desc" style="font-size:15px;color:#1a1a1a99;line-height:1.6">Your coach watches your progress and replies within 24 hours. Adjusts the plan to your body and your week.</p>
-      </div>
+
+    <!-- Timeline -->
+    <div style="position:relative;max-width:680px;margin:0 auto">
+      <!-- Vertical connector line -->
+      <div aria-hidden="true" style="position:absolute;left:27px;top:30px;bottom:30px;width:2px;background:linear-gradient(to bottom,#ff4892 0%,rgba(255,72,146,0.15) 100%);pointer-events:none"></div>
+
+      <ol style="list-style:none;padding:0;margin:0">
+
+        <!-- WEEK 1 — TRIAL (featured) -->
+        <li class="timeline-step--trial reveal" style="position:relative;padding-left:72px;margin-bottom:14px">
+          <div aria-hidden="true" class="timeline-dot" style="position:absolute;left:0;top:0;width:56px;height:56px;border-radius:50%;background:#ff4892;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(255,72,146,0.2),0 4px 16px rgba(255,72,146,0.4)">
+            <span class="font-display" style="color:#fff;font-size:26px;line-height:1">1</span>
+          </div>
+          <div style="background:#ff4892;border-radius:24px;padding:22px 24px;color:#fff;box-shadow:0 8px 32px rgba(255,72,146,0.3)">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:10px">
+              <span class="font-display" style="font-size:clamp(20px,4vw,26px);text-transform:uppercase;line-height:1">WEEK 1 · RESET</span>
+              <span style="background:rgba(255,255,255,0.22);border:1.5px solid rgba(255,255,255,0.45);border-radius:100px;padding:3px 11px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap">TRIAL WEEK — $29</span>
+            </div>
+            <p style="font-size:12px;font-weight:700;opacity:.75;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px">Goal: Reset your body and mind so results actually last.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+              <li style="font-size:14px;display:flex;align-items:flex-start;gap:7px"><span style="opacity:.7;flex-shrink:0;margin-top:1px">✓</span>Build balanced meals — not a strict meal plan</li>
+              <li style="font-size:14px;display:flex;align-items:flex-start;gap:7px"><span style="opacity:.7;flex-shrink:0;margin-top:1px">✓</span>Full-body workouts to wake up your muscles</li>
+              <li style="font-size:14px;display:flex;align-items:flex-start;gap:7px"><span style="opacity:.7;flex-shrink:0;margin-top:1px">✓</span>Daily mindset &amp; affirmations</li>
+              <li style="font-size:14px;display:flex;align-items:flex-start;gap:7px"><span style="opacity:.7;flex-shrink:0;margin-top:1px">✓</span>Fit-test to track your starting point</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- WEEK 2 -->
+        <li class="reveal delay-100" style="position:relative;padding-left:72px;margin-bottom:14px">
+          <div aria-hidden="true" class="timeline-dot" style="position:absolute;left:4px;top:4px;width:48px;height:48px;border-radius:50%;background:#fff;border:2.5px solid #ff4892;display:flex;align-items:center;justify-content:center">
+            <span class="font-display" style="color:#ff4892;font-size:22px;line-height:1">2</span>
+          </div>
+          <div style="background:#fff;border-radius:24px;padding:20px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+            <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:8px">
+              <span class="font-display text-dark" style="font-size:clamp(18px,3.5vw,22px);text-transform:uppercase;line-height:1">WEEK 2 · FOUNDATION</span>
+              <span style="background:#FFE0EC;color:#ff4892;border-radius:100px;padding:3px 10px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap">Full Program</span>
+            </div>
+            <p style="font-size:12px;font-weight:600;color:#1a1a1a80;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Goal: Build proper technique and consistency.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px">
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Progressive workouts, beginner to advanced</li>
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Personalized calorie &amp; macro targets</li>
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Weekly measurements begin</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- WEEK 3 -->
+        <li class="reveal delay-200" style="position:relative;padding-left:72px;margin-bottom:14px">
+          <div aria-hidden="true" class="timeline-dot" style="position:absolute;left:4px;top:4px;width:48px;height:48px;border-radius:50%;background:#fff;border:2.5px solid #ff4892;display:flex;align-items:center;justify-content:center">
+            <span class="font-display" style="color:#ff4892;font-size:22px;line-height:1">3</span>
+          </div>
+          <div style="background:#fff;border-radius:24px;padding:20px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+            <div style="margin-bottom:8px">
+              <span class="font-display text-dark" style="font-size:clamp(18px,3.5vw,22px);text-transform:uppercase;line-height:1;display:block">WEEK 3 · MOMENTUM</span>
+            </div>
+            <p style="font-size:12px;font-weight:600;color:#1a1a1a80;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Goal: Habits start feeling natural, not forced.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px">
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Workouts get harder, more HIIT</li>
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Visible strength gains</li>
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Motivation replaced by routine</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- WEEK 4 -->
+        <li class="reveal delay-300" style="position:relative;padding-left:72px;margin-bottom:14px">
+          <div aria-hidden="true" class="timeline-dot" style="position:absolute;left:4px;top:4px;width:48px;height:48px;border-radius:50%;background:#fff;border:2.5px solid #ff4892;display:flex;align-items:center;justify-content:center">
+            <span class="font-display" style="color:#ff4892;font-size:22px;line-height:1">4</span>
+          </div>
+          <div style="background:#fff;border-radius:24px;padding:20px 24px;box-shadow:0 2px 12px rgba(0,0,0,0.06)">
+            <div style="margin-bottom:8px">
+              <span class="font-display text-dark" style="font-size:clamp(18px,3.5vw,22px);text-transform:uppercase;line-height:1;display:block">WEEK 4 · LIFESTYLE</span>
+            </div>
+            <p style="font-size:12px;font-weight:600;color:#1a1a1a80;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px">Goal: Understand the "why," not just follow instructions.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:4px">
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Habits that fit your real life</li>
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>More energy, sustainable fat loss</li>
+              <li style="font-size:14px;color:#1a1a1acc;display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Confidence in your own choices</li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- WEEK 5 -->
+        <li class="reveal delay-400" style="position:relative;padding-left:72px">
+          <div aria-hidden="true" class="timeline-dot" style="position:absolute;left:0;top:0;width:56px;height:56px;border-radius:50%;background:#1a1a1a;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,0.25)">
+            <span class="font-display" style="color:#fff;font-size:26px;line-height:1">5</span>
+          </div>
+          <div style="background:#1a1a1a;border-radius:24px;padding:22px 24px;box-shadow:0 8px 32px rgba(0,0,0,0.18)">
+            <div style="margin-bottom:10px">
+              <span class="font-display" style="font-size:clamp(20px,4vw,26px);text-transform:uppercase;line-height:1;display:block;color:#fff">WEEK 5 · TRANSFORMATION</span>
+            </div>
+            <p style="font-size:12px;font-weight:600;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px">Goal: This isn't the finish line — it's your new normal.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:5px">
+              <li style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Final fit-test — see it all "come together"</li>
+              <li style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>Full before/after: weight, measurements, photos</li>
+              <li style="font-size:14px;color:rgba(255,255,255,0.8);display:flex;gap:7px"><span style="color:#ff4892;flex-shrink:0">✓</span>1–2 lb of fat loss/week for those who stay consistent (results vary)</li>
+            </ul>
+          </div>
+        </li>
+
+      </ol>
+    </div><!-- /timeline -->
+
+    <!-- Risk reversal + price transparency -->
+    <div class="text-center mt-10 reveal">
+      <p style="font-size:16px;color:#1a1a1a99;margin-bottom:6px">Don't love Week 1? Stop anytime — no pressure, no strings attached.</p>
+      <p style="font-size:14px;color:#1a1a1a66;font-weight:500">Week 1: $29 one-time → Weeks 2–5: $149/month</p>
     </div>
-    <div class="text-center mt-14 reveal">
-      <a href="https://www.paypal.com/ncp/payment/EMWL888RFB77J" target="_blank" rel="noopener" class="btn-pink px-10 py-4 inline-block" style="font-size:16px">Save my seat — starts July 5</a>
+
+    <!-- CTA -->
+    <div class="text-center mt-8 reveal">
+      <a href="https://www.paypal.com/ncp/payment/EMWL888RFB77J" target="_blank" rel="noopener" class="btn-pink px-10 py-4 inline-block" style="font-size:16px">Start Week 1 — Your Reset</a>
     </div>
+
   </div>
 </section>
 
